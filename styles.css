@@ -1,0 +1,189 @@
+/* STONEPRESS site styles. Brand system per 15_brand/BRAND_AND_MARKETING.md:
+   deep green and citrus palette, clean sans typography, generous white space,
+   athletic premium register. No food photography is used anywhere on this
+   site until real product photography exists (portfolio photography rule). */
+
+:root {
+  --green: #14532d;
+  --green-deep: #0c3520;
+  --citrus: #e8862e;
+  --citrus-soft: #f6c177;
+  --cream: #faf6ef;
+  --ink: #1c2420;
+  --muted: #5a665f;
+  --card: #ffffff;
+  --line: #e3ddd0;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background: var(--cream);
+  color: var(--ink);
+  line-height: 1.6;
+}
+
+a { color: var(--green); }
+
+.wrap { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+
+header.site {
+  background: var(--green-deep);
+  color: #ffffff;
+}
+header.site .wrap {
+  display: flex; align-items: center; justify-content: space-between;
+  padding-top: 18px; padding-bottom: 18px; flex-wrap: wrap; gap: 12px;
+}
+.wordmark {
+  font-size: 28px; font-weight: 800; letter-spacing: 3px; color: #ffffff;
+  text-decoration: none;
+}
+.wordmark span { color: var(--citrus); }
+nav.main a {
+  color: #ffffff; text-decoration: none; margin-left: 22px;
+  font-size: 15px; font-weight: 600; letter-spacing: 0.5px;
+}
+nav.main a:hover { color: var(--citrus-soft); }
+
+.hero {
+  background: var(--green);
+  color: #ffffff;
+  padding: 72px 0 64px 0;
+}
+.hero h1 {
+  font-size: 44px; line-height: 1.15; font-weight: 800; max-width: 720px;
+}
+.hero h1 span { color: var(--citrus-soft); }
+.hero p {
+  margin-top: 20px; font-size: 19px; max-width: 640px; color: #e8f0e9;
+}
+.hero .cta {
+  display: inline-block; margin-top: 30px; background: var(--citrus);
+  color: #ffffff; padding: 14px 28px; border-radius: 6px;
+  text-decoration: none; font-weight: 700; letter-spacing: 0.5px;
+}
+.hero .cta.alt {
+  background: transparent; border: 2px solid #ffffff; margin-left: 12px;
+}
+
+section.block { padding: 56px 0; }
+section.block.tight { padding: 36px 0; }
+h2.title { font-size: 30px; font-weight: 800; color: var(--green-deep); margin-bottom: 14px; }
+p.lede { font-size: 18px; color: var(--muted); max-width: 720px; }
+
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 20px; margin-top: 28px; }
+.card {
+  background: var(--card); border: 1px solid var(--line); border-radius: 10px;
+  padding: 26px 24px;
+}
+.card h3 { font-size: 19px; color: var(--green); margin-bottom: 8px; }
+.card p { font-size: 15px; color: var(--muted); }
+.card .tag {
+  display: inline-block; font-size: 12px; font-weight: 700; letter-spacing: 1px;
+  color: var(--citrus); text-transform: uppercase; margin-bottom: 10px;
+}
+
+.band { background: var(--green-deep); color: #ffffff; }
+.band h2.title { color: #ffffff; }
+.band p.lede { color: #cfe0d2; }
+.band .card { background: #12402a; border-color: #1d5238; }
+.band .card h3 { color: var(--citrus-soft); }
+.band .card p { color: #cfe0d2; }
+
+.menu-group { margin-top: 36px; }
+.menu-group h3 {
+  font-size: 22px; color: var(--green-deep); border-bottom: 3px solid var(--citrus);
+  padding-bottom: 8px; margin-bottom: 6px;
+}
+.menu-item { padding: 16px 0; border-bottom: 1px solid var(--line); }
+.menu-item h4 { font-size: 18px; color: var(--green); }
+.menu-item p { color: var(--muted); font-size: 15px; max-width: 760px; }
+.note {
+  background: #fdf3e3; border: 1px solid var(--citrus-soft); border-radius: 8px;
+  padding: 18px 22px; margin-top: 28px; font-size: 15px; color: var(--ink);
+}
+
+.loc { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 30px; margin-top: 22px; }
+.loc h3 { font-size: 22px; color: var(--green-deep); }
+.loc .status { font-weight: 700; color: var(--citrus); text-transform: uppercase; letter-spacing: 1px; font-size: 13px; }
+.loc p { color: var(--muted); margin-top: 8px; max-width: 760px; }
+
+form.contact { max-width: 640px; margin-top: 24px; }
+form.contact label { display: block; font-weight: 600; margin-top: 18px; margin-bottom: 6px; }
+form.contact input, form.contact select, form.contact textarea {
+  width: 100%; padding: 12px; border: 1px solid var(--line); border-radius: 6px;
+  font-size: 16px; font-family: inherit; background: #ffffff;
+}
+form.contact button {
+  margin-top: 22px; background: var(--green); color: #ffffff; border: none;
+  padding: 14px 30px; border-radius: 6px; font-size: 16px; font-weight: 700;
+  cursor: pointer;
+}
+
+footer.site {
+  background: var(--green-deep); color: #cfe0d2; padding: 40px 0; margin-top: 20px;
+  font-size: 14px;
+}
+footer.site .wordmark { font-size: 20px; }
+footer.site p { margin-top: 10px; max-width: 760px; }
+footer.site a { color: var(--citrus-soft); }
+
+/* Completion pass additions, 2026-11-26: current page marking, footer
+   navigation, launch list signup, screen reader only labels, focus states,
+   and phone width layout rules. */
+
+nav.main a.current { color: var(--citrus-soft); border-bottom: 2px solid var(--citrus); padding-bottom: 2px; }
+nav.foot { margin-top: 14px; }
+nav.foot a { margin-right: 18px; text-decoration: none; font-weight: 600; }
+nav.foot a:hover { text-decoration: underline; }
+
+a:focus-visible, button:focus-visible, input:focus-visible,
+select:focus-visible, textarea:focus-visible {
+  outline: 3px solid var(--citrus); outline-offset: 2px;
+}
+
+.sr {
+  position: absolute; width: 1px; height: 1px; overflow: hidden;
+  clip: rect(0 0 0 0); white-space: nowrap;
+}
+
+.signup {
+  background: var(--card); border: 1px solid var(--line); border-radius: 10px;
+  padding: 30px;
+}
+.signup p { color: var(--muted); max-width: 720px; margin-top: 6px; }
+form.signup {
+  display: flex; gap: 12px; flex-wrap: wrap; margin-top: 20px;
+  background: none; border: none; padding: 0;
+}
+form.signup input {
+  flex: 1 1 260px; padding: 13px 14px; border: 1px solid var(--line);
+  border-radius: 6px; font-size: 16px; font-family: inherit; background: #ffffff;
+}
+form.signup button {
+  background: var(--green); color: #ffffff; border: none; padding: 13px 26px;
+  border-radius: 6px; font-size: 16px; font-weight: 700; cursor: pointer;
+}
+form.signup button:hover { background: var(--green-deep); }
+.signup .fineprint { font-size: 13px; margin-top: 14px; }
+
+.cta-inline { color: var(--green); font-size: 17px; }
+
+@media (max-width: 720px) {
+  .wrap { padding: 0 18px; }
+  header.site .wrap { flex-direction: column; align-items: flex-start; }
+  nav.main a { margin-left: 0; margin-right: 18px; line-height: 2; }
+  .hero { padding: 48px 0 44px 0; }
+  .hero h1 { font-size: 31px; }
+  .hero p { font-size: 17px; }
+  .hero .cta { display: block; text-align: center; margin-left: 0; }
+  .hero .cta.alt { margin-top: 12px; }
+  section.block { padding: 40px 0; }
+  h2.title { font-size: 25px; }
+  p.lede { font-size: 16px; }
+  .loc, .signup { padding: 22px; }
+  form.signup button { width: 100%; }
+  form.contact button { width: 100%; }
+}

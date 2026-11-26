@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact | Stonepress</title>
+<meta name="description" content="Contact Stonepress and STRIPP'D JUICE LLC in Riverton, New Jersey. Wholesale, events, press, and general questions.">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<meta name="theme-color" content="#0c3520">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Stonepress">
+<meta property="og:title" content="Contact | Stonepress">
+<meta property="og:description" content="Contact Stonepress and STRIPP'D JUICE LLC in Riverton, New Jersey. Wholesale, events, press, and general questions.">
+<meta property="og:url" content="https://stonepressjuice.com/contact.html">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="site">
+  <div class="wrap">
+    <a class="wordmark" href="index.html">STONE<span>PRESS</span></a>
+    <nav class="main">
+      <a href="index.html">Home</a>
+      <a href="menu.html">Menu</a>
+      <a href="story.html">Our Story</a>
+      <a href="locations.html">Locations</a>
+      <a href="wholesale.html">Wholesale</a>
+      <a class="current" aria-current="page" href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="block">
+  <div class="wrap">
+    <h2 class="title">Contact</h2>
+    <p class="lede">Questions about the menu, a location, wholesale, an event, or press: write to us here.</p>
+    <p style="margin-top:14px; max-width:760px">Prefer direct email? Write to <a href="mailto:placeofpeacellc56@gmail.com">placeofpeacellc56@gmail.com</a>. For wholesale and partnership inquiries, the wholesale page explains how the program will work, and the fastest route is the same address with the subject Stonepress wholesale inquiry.</p>
+
+    <form class="contact" method="post" action="#">
+      <label for="name">Your name</label>
+      <input id="name" name="name" type="text" autocomplete="name">
+      <label for="email">Your email</label>
+      <input id="email" name="email" type="email" autocomplete="email">
+      <label for="topic">Topic</label>
+      <select id="topic" name="topic">
+        <option>General question</option>
+        <option>Wholesale or partnership</option>
+        <option>Events and catering</option>
+        <option>Press</option>
+        <option>Jobs</option>
+      </select>
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="6"></textarea>
+      <button type="submit">Send message</button>
+    </form>
+
+    <div class="note">
+      <p><strong>Please note:</strong> this form activates when the site launches. Company mail can be sent to STRIPP'D JUICE LLC, 600 Main Street, Riverton, New Jersey 08077.</p>
+    </div>
+  </div>
+
+<div id="launch-list" style="margin-top:36px">
+  <div class="wrap">
+    <div class="signup">
+      <h2 class="title">Be first to know when the drinks are ready</h2>
+      <p>The packaged drink line is in development now, and nothing is for sale yet. Join the launch list and we will write to you when the first drinks are ready to order. No date is promised, and your address is used only for launch news.</p>
+      <form class="signup" method="post" action="#">
+        <label class="sr" for="signup-email">Your email</label>
+        <input id="signup-email" name="email" type="email" autocomplete="email" required placeholder="Your email address">
+        <button type="submit">Join the launch list</button>
+      </form>
+      <p class="fineprint">Joining opens your email app with a short message addressed to us. Press send there and you are on the list. You can also write to us directly at <a href="mailto:placeofpeacellc56@gmail.com">placeofpeacellc56@gmail.com</a>.</p>
+    </div>
+  </div>
+</div>
+
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <a class="wordmark" href="index.html">STONE<span>PRESS</span></a>
+    <nav class="foot">
+      <a href="index.html">Home</a>
+      <a href="menu.html">Menu</a>
+      <a href="story.html">Our Story</a>
+      <a href="locations.html">Locations</a>
+      <a href="wholesale.html">Wholesale</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <p>Operated by STRIPP'D JUICE LLC, a New Jersey limited liability company. Riverton home: 600 Main Street, Riverton, New Jersey 08077.</p>
+    <p>Preview site. No location is open yet and nothing is for sale yet.</p>
+    <p>&copy; 2026 STRIPP'D JUICE LLC. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+var t = new URLSearchParams(window.location.search).get('topic');
+if (t === 'wholesale') { document.getElementById('topic').selectedIndex = 1; }
+</script>
+
+<script>
+document.querySelectorAll('form.signup').forEach(function (f) {
+  f.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var em = f.querySelector('input[name="email"]').value.trim();
+    var body = 'Please add this email to the Stonepress launch list: ' + em + '\n\nI understand the drink line is in development and nothing is for sale yet.';
+    window.location.href = 'mailto:placeofpeacellc56@gmail.com?subject=' + encodeURIComponent('Stonepress launch list signup') + '&body=' + encodeURIComponent(body);
+  });
+});
+</script>
+</body>
+</html>
